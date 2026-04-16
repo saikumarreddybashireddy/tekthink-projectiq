@@ -2985,7 +2985,72 @@ const VIEWS = {
       }).join('');
     })()}
 
-    <div id="pf-autoopen"></div>`
+    <div id="pf-autoopen"></div>
+
+    <!-- ===== DASHBOARD SECTION ===== -->
+    <div style="margin-top:24px">
+      <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--txt);margin-bottom:14px;display:flex;align-items:center;gap:8px">
+        📊 Executive Dashboard
+        <span class="badge badge-green" style="font-size:10px"><span class="pulse-dot"></span>&nbsp;Live</span>
+      </div>
+
+      <!-- Alerts -->
+      <div class="alert-banner red" onclick="askSuggestion('What should I do about the Tower B concrete pour delay of 12 days? Give me an action plan.');openAI()">
+        <span class="alert-banner-icon">⚠️</span>
+        <div class="alert-banner-text"><strong>Tower B Delay Risk:</strong> Concrete pour is 12 days behind schedule. Supplier escalation required immediately.</div>
+        <span class="alert-banner-action" onclick="event.stopPropagation();askSuggestion('What should I do about the Tower B concrete pour delay?');openAI()">Ask AI →</span>
+        <button class="alert-banner-close" onclick="event.stopPropagation();this.closest('.alert-banner').remove()">✕</button>
+      </div>
+      <div class="alert-banner amber">
+        <span class="alert-banner-icon">💰</span>
+        <div class="alert-banner-text"><strong>Payments Due:</strong> ₹4.2 Cr to BuildCo due Apr 20 · ₹1.2 Cr Architect fees due Apr 30</div>
+        <span class="alert-banner-action" onclick="switchView('finance')">View Finance →</span>
+        <button class="alert-banner-close" onclick="this.closest('.alert-banner').remove()">✕</button>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="quick-actions" style="margin-bottom:16px">
+        <div class="quick-action" onclick="switchView('construction')">🏗️ Construction</div>
+        <div class="quick-action" onclick="switchView('sales')">💰 Sales</div>
+        <div class="quick-action" onclick="switchView('cx')">🎯 CX Issues</div>
+        <div class="quick-action" onclick="switchView('finance')">📈 Finance</div>
+        <div class="quick-action" onclick="askSuggestion('Generate a comprehensive executive summary report for all 3 projects for today');openAI()">🧠 AI Report</div>
+      </div>
+
+      <!-- KPIs -->
+      <div class="kpi-grid" style="margin-bottom:16px">
+        ${kpi('Overall Progress','68%','↑ 3% this week','up',[52,55,58,60,62,64,65,66,67,68])}
+        ${kpi('Revenue Booked','₹142 Cr','↑ ₹8 Cr vs target','up',[100,110,120,128,135,138,140,142])}
+        ${kpi('Open Issues','23','↓ 5 resolved today','up',[34,30,28,26,25,24,23])}
+        ${kpi('RERA Status','Active','All filings current','neutral',null)}
+      </div>
+
+      <!-- Construction + AI Insights -->
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title">Construction Progress — Skyline Heights</div>
+          ${PROJECT_DATA.construction.towers.map(t => progRow(t.name, t.pct, t.color)).join('')}
+          <div class="divider"></div>
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--txt2)">
+            <span>Tasks: ${PROJECT_DATA.construction.tasksComplete}/${PROJECT_DATA.construction.tasksTotal}</span>
+            <span>Labour: ${PROJECT_DATA.construction.labour} on-site</span>
+            <span style="color:var(--red)">⚠️ ${PROJECT_DATA.construction.delayedTasks} delayed</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">AI Portfolio Insights</div>
+          <div class="ai-insight-card" onclick="askSuggestion('Marina Bay Villas has CRZ and soil issues — what urgent actions should I take?');openAI()">
+            <span class="ai-insight-icon">🚨</span><div><div class="ai-insight-label">Urgent — Marina Bay</div><div class="ai-insight-text">CRZ clearance pending + soil collapse near Zone 2. Risk of 3-month delay. Escalate immediately.</div></div>
+          </div>
+          <div class="ai-insight-card" onclick="askSuggestion('Prestige Gardens is at 59% revenue vs target. How do we accelerate bookings?');openAI()">
+            <span class="ai-insight-icon">💡</span><div><div class="ai-insight-label">Opportunity — Prestige</div><div class="ai-insight-text">Only 59% to revenue target. NRI referral incentive +0.5% could add ₹18 Cr.</div></div>
+          </div>
+          <div class="ai-insight-card" onclick="askSuggestion('Skyline Heights Tower C is ahead of schedule — how do I monetize this?');openAI()">
+            <span class="ai-insight-icon">📈</span><div><div class="ai-insight-label">Win — Skyline Heights</div><div class="ai-insight-text">Tower C 1 week ahead. Early handover premium could yield ₹3–4 Cr additional revenue.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>`
   },
   // ========== FUNNEL ==========
   funnel:{title:'Sales Conversion Funnel',breadcrumb:'Skyline Heights · Lead to Registration Analytics',render:()=>`
@@ -3851,7 +3916,6 @@ const ROLES = {
     nav: [
       { section: 'Overview' },
       { view: 'portfolio',     icon: '🌐', label: 'Portfolio',        badge: '3' },
-      { view: 'management',    icon: '📊', label: 'Dashboard' },
       { section: 'Construction' },
       { view: 'construction',  icon: '🏗️', label: 'Construction',     badge: '7', alert: true },
       { section: 'Sales & CX' },
@@ -3872,7 +3936,6 @@ const ROLES = {
     nav: [
       { section: 'Overview' },
       { view: 'portfolio',     icon: '🌐', label: 'Portfolio',        badge: '3' },
-      { view: 'management',    icon: '📊', label: 'Dashboard' },
       { section: 'Finance' },
       { view: 'finance',       icon: '📈', label: 'Finance' },
       { view: 'vendors',       icon: '🏭', label: 'Vendors' },
