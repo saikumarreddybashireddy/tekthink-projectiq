@@ -584,13 +584,7 @@ button{font-family:'DM Sans',sans-serif}
     </div>
     <div class="ai-context">
       <div class="ai-context-label">Context — Active Module</div>
-      <div class="ai-context-chips" id="ai-context-chips">
-        <div class="ai-chip active" onclick="setContext('all',this)">All Modules</div>
-        <div class="ai-chip" onclick="setContext('construction',this)">Construction</div>
-        <div class="ai-chip" onclick="setContext('sales',this)">Sales</div>
-        <div class="ai-chip" onclick="setContext('cx',this)">CX</div>
-        <div class="ai-chip" onclick="setContext('finance',this)">Finance</div>
-      </div>
+      <div class="ai-context-chips" id="ai-context-chips" style="display:none"></div>
     </div>
     <div class="ai-messages" id="ai-msgs">
       <div class="ai-msg system">
@@ -4044,6 +4038,12 @@ function switchView(v) {
   closeNotif();
   if (v === 'portfolio') setTimeout(()=>togglePfProject('P1'), 100);
   if (v === 'construction') startSensorSim();
+
+  // Auto-set AI context based on view
+  const ctxMap = { construction:'construction', sales:'sales', funnel:'sales', sitevisits:'sales', channels:'sales', marketing:'sales', cx:'cx', comms:'cx', handover:'cx', finance:'finance', vendors:'finance', legal:'finance' };
+  aiContext = ctxMap[v] || 'all';
+  const indicator = document.getElementById('active-context-label');
+  if (indicator) indicator.textContent = aiContext.charAt(0).toUpperCase() + aiContext.slice(1);
   else if (sensorInterval) { clearInterval(sensorInterval); sensorInterval = null; }
   if (v === 'management') { setTimeout(() => renderTowerMap('all'), 50); }
 }
