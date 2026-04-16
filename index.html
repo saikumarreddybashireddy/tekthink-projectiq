@@ -3595,10 +3595,10 @@ function buildSystemPrompt() {
 
   // Build only what's relevant to the active context
   const sections = {
-    construction: c ? `Construction: ${c.towers?.map(t=>`${t.name} ${t.pct}%`).join(', ')}. Delays: ${c.delays?.map(d=>`${d.task} (${d.days}d, ${d.risk})`).join('; ')}. Tasks: ${c.tasksComplete}/${c.tasksTotal} done, ${c.delayedTasks} delayed. Labour: ${c.labour}.` : '',
-    sales: s ? `Sales: ${s.totalLeads} leads, ${s.bookings} booked, ${s.pctAchieved}% of target. Hot leads: ${s.leads?.filter(l=>l.stage==='Hot').map(l=>`${l.name} (${l.val})`).join(', ')}.` : '',
-    finance: f ? `Finance: Budget ${f.totalBudget}, spent ${f.spent} (${f.spentPct}%), payments due ${f.paymentsDue}.` : '',
-    cx: PROJECT_DATA.cx ? `CX: ${PROJECT_DATA.cx.openIssues} open, ${PROJECT_DATA.cx.escalated} escalated, CSAT ${PROJECT_DATA.cx.csat}.` : '',
+    construction: c ? `Construction: ${c.towers?.map(t=>`${t.name} ${t.pct}% (${t.floors} floors, ${t.workers} workers, status: ${t.status})`).join(', ')}. Delays: ${c.delays?.map(d=>`${d.task} — ${d.days} days delayed, risk: ${d.risk}, cause: ${d.cause}`).join('; ')}. Tasks: ${c.tasksComplete}/${c.tasksTotal} done, ${c.delayedTasks} delayed. Labour on-site: ${c.labour}.` : '',
+    sales: s ? `Sales: ${s.totalLeads} leads, ${s.bookings} booked, ${s.pctAchieved}% of target. Hot leads: ${s.leads?.filter(l=>l.stage==='Hot').map(l=>`${l.name} interested in ${l.unit} (${l.val}, ${l.prob}% probability, last contact: ${l.last})`).join(', ')}. Monthly: ${s.monthly?.map(m=>`${m.m}: ${m.v} bookings`).join(', ')}.` : '',
+    finance: f ? `Finance: Budget ${f.totalBudget}, spent ${f.spent} (${f.spentPct}%), payments due ${f.paymentsDue}. Pending payments: ${f.payments?.filter(p=>p.status==='Pending').map(p=>`${p.vendor} ${p.amount} due ${p.due}`).join(', ')}.` : '',
+    cx: PROJECT_DATA.cx ? `CX: ${PROJECT_DATA.cx.openIssues} open, ${PROJECT_DATA.cx.escalated} escalated, CSAT ${PROJECT_DATA.cx.csat}. SLA compliance: ${PROJECT_DATA.cx.slaCompliance}%. Issues: ${PROJECT_DATA.cx.issues?.map(i=>`${i.id} ${i.customer} (${i.unit}) — ${i.issue}, ${i.priority} priority, ${i.status}, ${i.age} old, assigned to ${i.assignedTo}`).join('; ')}.` : '',
   };
 
   const relevantData = ctx === 'construction' ? sections.construction
