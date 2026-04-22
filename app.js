@@ -43,9 +43,9 @@ const PROJECT_DATA={name:"Skyline Heights",location:"Hyderabad, Telangana",phase
           {month:"Aug",val:22,target:28}
         ],
         pipeline:[
-          {stage:"Hot Leads",count:42,color:"#ef4444",pct:42},
-          {stage:"Warm Leads",count:68,color:"#f59e0b",pct:68},
-          {stage:"Site Visits",count:92,color:"#3b82f6",pct:100}
+          {phase:"Phase 1 — Tower A",units:100,booked:70,revenue:"₹64 Cr"},
+          {phase:"Phase 2 — Tower B",units:96,booked:30,revenue:"₹45 Cr"},
+          {phase:"Phase 3 — Tower C",units:104,booked:90,revenue:"₹33 Cr"}
         ],
         leads:[
           {id:"L001",name:"Arjun Reddy",unit:"Tower A — A-1204 (F12, 3BHK, 1480 sqft)",value:"₹94L",stage:"Hot",chance:92,phone:"+91 98765 43210",email:"arjun.reddy@gmail.com",source:"Referral",notes:"NRI buyer — ready to sign. Wants possession before Dec 2026. Pre-approved home loan from HDFC.",visits:4,lastContact:"Today"},
@@ -131,9 +131,8 @@ const PROJECT_DATA={name:"Skyline Heights",location:"Hyderabad, Telangana",phase
           {month:"Aug",val:20,target:22}
         ],
         pipeline:[
-          {stage:"Hot Leads",count:38,color:"#ef4444",pct:38},
-          {stage:"Warm Leads",count:54,color:"#f59e0b",pct:54},
-          {stage:"Site Visits",count:72,color:"#3b82f6",pct:72}
+          {phase:"Block A — Premium",units:96,booked:70,revenue:"₹55 Cr"},
+          {phase:"Block B — Standard",units:84,booked:24,revenue:"₹33 Cr"}
         ],
         leads:[
           {id:"L001",name:"Priya Krishnamurthy",unit:"Block A — PA-1002 (F10, 3BHK, 1850 sqft)",value:"₹1.48 Cr",stage:"Hot",chance:90,phone:"+91 94481 11222",email:"priya.k@gmail.com",source:"Referral",notes:"Senior IT professional. Budget ₹1.5 Cr. Wants luxury finishes and EV charging point. Decision by Apr 30.",visits:3,lastContact:"Today"},
