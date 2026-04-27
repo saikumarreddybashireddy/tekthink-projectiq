@@ -305,6 +305,41 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 
 .no-project .sidebar{display:none!important}
 .no-project .app-main{width:100%!important}
+
+/* ── BACKWARD COMPAT ALIASES ── */
+.topbar-left{display:flex;align-items:center;gap:8px;min-width:0;flex:1}
+.topbar-right{display:flex;align-items:center;gap:6px;flex-shrink:0;margin-left:auto}
+.topbar-title{font-size:14px;font-weight:700;color:var(--txt);font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:-0.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar-breadcrumb{font-size:11px;color:var(--txt3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.icon-btn{width:32px;height:32px;border-radius:8px;border:1px solid var(--border);background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--txt2);transition:all .15s;flex-shrink:0;position:relative;font-size:14px}
+.icon-btn:hover{background:var(--surface2);color:var(--txt)}
+.notif-dot{position:absolute;top:5px;right:5px;width:7px;height:7px;background:var(--red);border-radius:50%;border:1.5px solid var(--surface)}
+.pulse-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 2s infinite;vertical-align:middle;margin-right:2px}
+.badge.badge-green{background:var(--green-light);color:#059669;border-color:rgba(5,150,105,0.2);padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600;border:1px solid;display:inline-flex;align-items:center;gap:4px}
+.badge.badge-amber{background:var(--amber-light);color:#d97706;border-color:rgba(217,119,6,0.2);padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600;border:1px solid;display:inline-flex;align-items:center}
+.badge.badge-blue{background:var(--blue-light);color:#2563eb;border-color:rgba(37,99,235,0.2);padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600;border:1px solid;display:inline-flex;align-items:center}
+.badge.badge-red{background:var(--red-light);color:#dc2626;border-color:rgba(220,38,38,0.2);padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600;border:1px solid}
+.btn-ai,.btn-purple{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:var(--accent);color:#fff;border:none;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;transition:all .15s;white-space:nowrap;font-family:'Inter',sans-serif}
+.btn-ai:hover,.btn-purple:hover{background:#4338ca;box-shadow:0 4px 12px rgba(79,70,229,0.3)}
+.topbar-user-avatar{width:30px;height:30px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;cursor:pointer;flex-shrink:0}
+/* Fix app layout when no-project */
+.no-project .topbar{background:var(--surface);border-bottom:1px solid var(--border)}
+.no-project #back-to-portfolio{display:none!important}
+/* pf-grid fix */
+.pf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;padding:24px 28px}
+/* Nav active state */
+.nav-item.active,.nav-item[style*="background:#eff6ff"]{background:var(--accent-light)!important;color:var(--accent)!important}
+/* tbl-action stays visible */
+.tbl-action{background:var(--accent-light);color:var(--accent);border:none;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif}
+.tbl-action:hover{background:var(--accent);color:#fff}
+/* card general */
+.card{background:var(--surface);border-radius:var(--r-lg);border:1px solid var(--border);box-shadow:var(--shadow-sm);overflow:hidden}
+.card-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 10px;border-bottom:1px solid var(--border)}
+.card-title{font-size:13px;font-weight:700;color:var(--txt);letter-spacing:-0.01em}
+.view-pad{padding:18px 20px}
+/* Sidebar user info */
+.sidebar-user{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--border);cursor:pointer}
+.sidebar-user:hover{background:var(--surface2)}
 </style>
 </head>
 <body>
@@ -575,6 +610,6 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 </div>
 
 
- <script src="/app.js?v=1777284563"></script>
+ <script src="/app.js?v=1777284836"></script>
 </body>
 </html>
