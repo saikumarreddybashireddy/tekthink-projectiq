@@ -104,10 +104,10 @@ button{font-family:'Plus Jakarta Sans',sans-serif}
 
 /* TOPBAR */
 .topbar{display:flex;align-items:center;padding:0 24px;height:56px;background:#ffffff;border-bottom:1px solid #e5e7eb;gap:12px;flex-shrink:0;position:sticky;top:0;z-index:20}
-.topbar-left{display:flex;align-items:center;gap:12px}
+.topbar-left{display:flex;align-items:center;gap:10px;flex:1;min-width:0;overflow:hidden}
 .topbar-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:600;color:var(--txt)}
 .topbar-breadcrumb{font-size:11px;color:var(--txt3)}
-.topbar-right{display:flex;align-items:center;gap:8px}
+.topbar-right{display:flex;align-items:center;gap:6px;flex-shrink:0;margin-left:12px}
 .badge{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:5px;font-size:11px;font-weight:500}
 .badge-green{background:#dcfce7;color:#166534}
 .badge-amber{background:#fef3c7;color:#92400e}
@@ -704,6 +704,20 @@ button{font-family:'Plus Jakarta Sans',sans-serif}
 .ca-card-meta{font-size:11px;color:var(--txt3);margin-bottom:10px}
 .ca-card-progress-bar{height:4px;background:#f3f4f6;border-radius:3px;overflow:hidden;margin-bottom:6px}
 .ca-card-pct{font-size:12px;font-weight:700}
+
+.tbl{width:100%;border-collapse:collapse;table-layout:fixed}
+.tbl th,.tbl td{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:8px 10px;font-size:12px;text-align:left;border-bottom:1px solid #f3f4f6;vertical-align:middle}
+.tbl th{background:#f9fafb;font-weight:600;color:#6b7280;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.tbl tr:hover td{background:#f8f9ff}
+.tbl-wrap{overflow-x:auto}
+.tbl .col-wbs{width:52px}
+.tbl .col-phase-num{width:44px}
+.tbl .col-phase-name{width:140px}
+.tbl .col-activity{width:150px}
+.tbl .col-tasks{width:50px;text-align:center}
+.tbl .col-progress{width:110px}
+.tbl .col-status{width:100px}
+.tbl .col-pending{width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 </style>
 </head>
 <body>
@@ -974,6 +988,6 @@ button{font-family:'Plus Jakarta Sans',sans-serif}
 </div>
 
 
- <script src="/app.js?v=1777272188"></script>
+ <script src="/app.js?v=1777273838"></script>
 </body>
 </html>
