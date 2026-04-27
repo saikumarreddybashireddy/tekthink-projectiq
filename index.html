@@ -208,7 +208,7 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 .modal-content{background:var(--surface);border-radius:var(--r-xl);padding:28px;width:520px;max-width:90vw;box-shadow:var(--shadow-lg);border:1px solid var(--border)}
 
 /* ── AI PANEL ── */
-.ai-panel{background:var(--surface);border-left:1px solid var(--border);display:flex;flex-direction:column}
+.ai-panel{background:var(--surface);border-left:1px solid var(--border);display:none;flex-direction:column}
 .ai-msg-user{background:var(--accent);color:#fff;border-radius:12px 12px 3px 12px;padding:9px 13px;font-size:12.5px;max-width:85%;margin-left:auto;line-height:1.5}
 .ai-msg-bot{background:var(--surface2);color:var(--txt);border-radius:12px 12px 12px 3px;padding:9px 13px;font-size:12.5px;max-width:90%;line-height:1.5;border:1px solid var(--border)}
 .ai-input-row{background:var(--surface2);border-top:1px solid var(--border)}
@@ -340,7 +340,8 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 /* Sidebar user info */
 .sidebar-user{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--border);cursor:pointer}
 .sidebar-user:hover{background:var(--surface2)}
-</style>
+
+.notif-panel{display:none;position:absolute;right:10px;top:52px;width:320px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);z-index:100;max-height:70vh;overflow-y:auto}</style>
 </head>
 <body>
 <div class="app" id="app">
@@ -610,6 +611,6 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 </div>
 
 
- <script src="/app.js?v=1777284836"></script>
+ <script src="/app.js?v=1777285715"></script>
 </body>
 </html>
