@@ -706,7 +706,7 @@ button{font-family:'Plus Jakarta Sans',sans-serif}
 .ca-card-pct{font-size:12px;font-weight:700}
 
 .tbl{width:100%;border-collapse:collapse;table-layout:auto}
-.tbl th,.tbl td{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:8px 10px;font-size:12px;text-align:left;border-bottom:1px solid #f3f4f6;vertical-align:middle}
+.tbl th,.tbl td{overflow:hidden;white-space:nowrap;padding:8px 10px;font-size:12px;text-align:left;border-bottom:1px solid #f3f4f6;vertical-align:middle}
 .tbl th{background:#f9fafb;font-weight:600;color:#6b7280;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
 .tbl tr:hover td{background:#f8f9ff}
 .tbl-wrap{overflow-x:auto}
@@ -718,6 +718,9 @@ button{font-family:'Plus Jakarta Sans',sans-serif}
 .tbl .col-progress{width:110px}
 .tbl .col-status{width:100px}
 .tbl .col-pending{width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.tbl th,.tbl td{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px}
+.tbl th{white-space:normal;overflow:visible;text-overflow:clip}
 </style>
 </head>
 <body>
@@ -988,6 +991,6 @@ button{font-family:'Plus Jakarta Sans',sans-serif}
 </div>
 
 
- <script src="/app.js?v=1777277681"></script>
+ <script src="/app.js?v=1777278458"></script>
 </body>
 </html>
