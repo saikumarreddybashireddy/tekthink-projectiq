@@ -129,22 +129,20 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 .pf-footer-arrow{width:26px;height:26px;border-radius:7px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:13px}
 
 /* ── PROJECT HEADER ── */
-.proj-header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 20px 12px}
-.proj-breadcrumb{font-size:11px;color:var(--txt3);margin-bottom:8px;display:flex;align-items:center;gap:4px}
+.proj-header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 20px 14px;color:var(--txt3);margin-bottom:8px;display:flex;align-items:center;gap:4px}
 .proj-breadcrumb-link{color:var(--accent);cursor:pointer;font-weight:500}
 .proj-title-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .proj-back{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border:1px solid var(--border2);border-radius:7px;cursor:pointer;color:var(--txt2);transition:all .15s;flex-shrink:0}
 .proj-back:hover{background:var(--surface2);color:var(--txt)}
 .proj-name{font-size:18px;font-weight:800;color:var(--txt);letter-spacing:-0.03em;font-family:'Plus Jakarta Sans',sans-serif}
-.proj-meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.proj-meta-card{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:10px 13px;display:flex;align-items:center;justify-content:space-between}
+.proj-meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;border:1px solid var(--border);border-radius:var(--r-sm);padding:10px 13px;display:flex;align-items:center;justify-content:space-between}
 .proj-meta-content{}
 .proj-meta-lbl{font-size:10px;color:var(--txt3);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px}
 .proj-meta-val{font-size:13.5px;font-weight:700;color:var(--txt)}
 .proj-meta-ico{font-size:20px;opacity:0.5}
 
 /* ── CARDS ── */
-.card{background:var(--surface);border-radius:var(--r-lg);border:1px solid var(--border);box-shadow:var(--shadow-sm);overflow:hidden}
+.card{background:var(--surface);border-radius:var(--r-lg);border:1px solid var(--border);box-shadow:var(--shadow-sm);overflow:hidden;align-self:start}
 .card-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 10px;border-bottom:1px solid var(--border)}
 .card-title{font-size:13px;font-weight:700;color:var(--txt);letter-spacing:-0.01em}
 
@@ -191,7 +189,7 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 .tbl tr:last-child td{border-bottom:none}
 
 /* ── VIEW PAD ── */
-.view-pad{padding:18px 20px;background:var(--bg)}
+.view-pad{padding:16px 20px;background:var(--bg)}
 .section-title{font-size:13px;font-weight:700;color:var(--txt);letter-spacing:-0.01em;margin:14px 0 8px}
 
 /* ── PROGRESS ── */
@@ -336,9 +334,7 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 .card{background:var(--surface);border-radius:var(--r-lg);border:1px solid var(--border);box-shadow:var(--shadow-sm);overflow:hidden}
 .card-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 10px;border-bottom:1px solid var(--border)}
 .card-title{font-size:13px;font-weight:700;color:var(--txt);letter-spacing:-0.01em}
-.view-pad{padding:18px 20px}
-/* Sidebar user info */
-.sidebar-user{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--border);cursor:pointer}
+.view-pad{padding:16px 20px;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--border);cursor:pointer}
 .sidebar-user:hover{background:var(--surface2)}
 
 .notif-panel{display:none;position:absolute;right:10px;top:52px;width:320px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);z-index:100;max-height:70vh;overflow-y:auto}
@@ -380,7 +376,7 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 .quick-actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
 .quick-action{display:flex;align-items:center;gap:6px;padding:8px 16px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;font-size:13px;font-weight:500;color:#374151;cursor:pointer;transition:all .15s;white-space:nowrap}
 .quick-action:hover{background:#f0f0ff;border-color:#c7d2fe;color:#4f46e5}
-.view-pad{padding:20px 24px;background:#f8f9fc;min-height:400px}
+.view-pad{padding:16px 20px;background:#f8f9fc;min-height:400px}
 .btn-accent{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:#4f46e5;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
 .btn-accent:hover{background:#4338ca}
 
@@ -444,9 +440,9 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 .kpi-icon{font-size:20px;margin-bottom:8px}
 .kpi-sparkline{height:28px;display:flex;align-items:flex-end;gap:2px;margin-top:8px}
 .kpi-spark-bar{flex:1;border-radius:2px 2px 0 0;transition:height 0.5s}
-.grid-2{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:12px;margin-bottom:18px}
-.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px}
-.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}
+.grid-2{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:12px;margin-bottom:18px;align-items:start}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px;align-items:start}
+.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px;align-items:start}
 .card-title-actions{display:flex;align-items:center;gap:6px}
 .prog-row{display:flex;align-items:center;gap:10px;margin-bottom:9px;cursor:pointer;padding:2px 0}
 .prog-label{font-size:12px;color:var(--txt);width:130px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:color 0.15s}
@@ -1529,6 +1525,6 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 </div>
 
 
- <script src="/app.js?v=1777357986"></script>
+ <script src="/app.js?v=1777358440"></script>
 </body>
 </html>
