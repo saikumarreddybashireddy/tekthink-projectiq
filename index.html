@@ -610,7 +610,106 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 .flat-detail-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:700}
 .flat-detail-meta{color:rgba(255,255,255,0.6);font-size:11px;margin-top:2px}
 .flat-panel-btn{padding:5px 10px;border-radius:6px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:11px;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:background 0.15s}
-.flat-panel-close{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.1);border:none;color:rgba(255,255,255,0.6);cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}</style>
+.flat-panel-close{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.1);border:none;color:rgba(255,255,255,0.6);cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+/* ── Restored rules ── */
+.nav-count.alert{background:rgba(239,68,68,0.2);color:#fca5a5}
+.ai-nav-btn:hover{background:linear-gradient(135deg,rgba(249,115,22,0.35),rgba(139,92,246,0.35))}
+.role-opt:hover{background:rgba(255,255,255,0.07)}
+.role-opt.active-role{background:rgba(249,115,22,0.15);border-left:2px solid var(--accent)}
+.ask-ai-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(249,115,22,0.4)}
+.kpi-change.up{color:var(--teal)}
+.kpi-change.down{color:var(--red)}
+.kpi-change.neutral{color:var(--txt2)}
+.prog-row:hover .prog-label{color:var(--accent)}
+.tbl th:first-child{border-radius:6px 0 0 0}
+.tbl th:last-child{border-radius:0 6px 0 0}
+.tbl tbody tr{cursor:pointer;transition:background 0.12s}
+.tbl tbody tr:hover td{background:rgba(249,115,22,0.04)}
+.tbl-action.danger:hover{background:var(--red);border-color:var(--red);color:#fff}
+.tbl-action.success:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+.tl-item:hover{background:var(--surface2)}
+.tl-dot.done{background:var(--teal);box-shadow:0 0 0 2px rgba(16,185,129,0.2)}
+.tl-dot.wip{background:var(--amber);box-shadow:0 0 0 2px rgba(245,158,11,0.2);animation:pulse-dot 2s infinite}
+.tl-dot.todo{background:var(--border)}
+.risk-row:hover{transform:translateX(2px)}
+.risk-row.red .risk-dot{background:var(--red)}
+.risk-row.amber .risk-dot{background:var(--amber)}
+.risk-row.green .risk-dot{background:var(--teal)}
+.risk-dismiss:hover{color:var(--red)}
+.ai-overlay.open{display:block;opacity:1}
+.ai-panel.open{transform:translateX(0)}
+.ai-close-btn:hover{background:rgba(255,255,255,0.2)}
+.ai-chip:hover,.ai-chip.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.ai-msg.system{align-self:flex-start}
+.ai-msg.user{align-self:flex-end}
+.ai-msg.system .ai-msg-bubble{background:var(--surface2);color:var(--txt);border:1px solid var(--border);border-radius:4px 12px 12px 12px}
+.ai-msg.user .ai-msg-bubble{background:var(--navy);color:#fff;border-radius:12px 4px 12px 12px}
+.ai-msg.user .ai-msg-time{text-align:right}
+.ai-sug:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.ai-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(249,115,22,0.1)}
+.ai-send:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(249,115,22,0.4)}
+.ai-send:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.ai-insight-card:hover{border-color:rgba(249,115,22,0.4);box-shadow:var(--shadow-md)}
+.alert-banner:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.alert-banner.blue{background:#dbeafe;border:1px solid #bfdbfe;color:#1e40af}
+.rev-row:hover{background:var(--surface2)}
+.sla-row:hover{background:var(--surface2)}
+.portal-btn-primary:hover{background:var(--accent2)}
+.portal-btn-ghost:hover{background:rgba(255,255,255,0.2)}
+.modal-overlay.open{display:flex}
+.modal-close:hover{background:var(--surface3)}
+.notif-panel.open{transform:translateX(0)}
+.notif-item:hover{background:var(--surface2)}
+.notif-item.unread{background:#fff8f5}
+.notif-icon.red{background:#fee2e2}
+.notif-icon.amber{background:#fef3c7}
+.notif-icon.green{background:#dcfce7}
+.notif-icon.blue{background:#dbeafe}
+.toast.success{background:#dcfce7;border:1px solid #bbf7d0;color:#166534}
+.toast.error{background:#fee2e2;border:1px solid #fecaca;color:#991b1b}
+.toast.info{background:#dbeafe;border:1px solid #bfdbfe;color:#1e40af}
+.toast.warning{background:#fef3c7;border:1px solid #fde68a;color:#92400e}
+.sensor-card:hover{border-color:var(--accent);box-shadow:var(--shadow-md)}
+.lead-card:hover{border-color:var(--accent);box-shadow:var(--shadow-md);transform:translateX(2px)}
+.issue-card:hover{border-color:var(--blue);box-shadow:var(--shadow-md)}
+.issue-card.critical{border-left:3px solid var(--red)}
+.issue-card.high{border-left:3px solid var(--amber)}
+.issue-card.normal{border-left:3px solid var(--blue)}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:500}
+.tab:hover:not(.active){color:var(--txt)}
+.form-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(249,115,22,0.08)}
+.form-textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(249,115,22,0.08)}
+.stat-row:last-child{border-bottom:none}
+.tag:hover{background:var(--navy);color:#fff}
+.forecast-bar:hover .forecast-bar-inner{opacity:0.8}
+.activity-item:hover{background:var(--surface2)}
+.gantt-row:hover{background:var(--surface2)}
+.punch-item:hover{border-color:var(--blue);box-shadow:var(--shadow-md)}
+.punch-item.severity-High{border-left:3px solid var(--red)}
+.punch-item.severity-Med{border-left:3px solid var(--amber)}
+.punch-item.severity-Low{border-left:3px solid var(--blue)}
+.funnel-stage-row:hover{transform:translateX(3px)}
+.cal-day:hover{background:var(--surface2);border-color:var(--accent)}
+.cal-day.today{background:#fff7ed;border-color:var(--accent);color:var(--accent);font-weight:700}
+.cal-day.has-event::after{content:'';position:absolute;bottom:4px;right:4px;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+.partner-card:hover{border-color:var(--accent);box-shadow:var(--shadow-md)}
+.doc-item:hover{border-color:var(--blue);background:var(--surface2)}
+.portfolio-card:hover{border-color:var(--accent);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.society-req:hover{border-color:var(--blue)}
+.tower-header.ta{background:#fff3e6;color:#c2410c}
+.tower-header.tb{background:#fef9c3;color:#92400e}
+.tower-header.tc{background:#d1fae5;color:#065f46}
+.flat-cell:hover{transform:scale(1.18);z-index:10;box-shadow:0 4px 12px rgba(0,0,0,0.18)}
+.flat-cell.booked{background:#dcfce7;color:#166534;border-color:#86efac}
+.flat-cell.available{background:#dbeafe;color:#1e40af;border-color:#93c5fd}
+.flat-cell.reserved{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.flat-cell.under-construction{background:#f3f4f6;color:#6b7280;border-color:#d1d5db}
+.flat-cell.sold{background:#ede9fe;color:#5b21b6;border-color:#c4b5fd}
+.flat-cell.delayed{background:#fee2e2;color:#991b1b;border-color:#fca5a5}
+.flat-cell.hot-lead{background:#ffedd5;color:#c2410c;border-color:#fdba74}
+.legend-item:hover{background:var(--surface2)}
+.flat-detail-panel.show{display:flex}
+.flat-panel-btn:hover{background:rgba(255,255,255,0.25)}</style>
 </head>
 <body>
 <div class="app" id="app">
@@ -880,6 +979,6 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 </div>
 
 
- <script src="/app.js?v=1777357152"></script>
+ <script src="/app.js?v=1777357718"></script>
 </body>
 </html>
