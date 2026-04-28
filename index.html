@@ -1257,6 +1257,40 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 .unit-chip.c-todo { background: #9ca3af; }
 
 .grid-2>.card,.grid-3>.card,.grid-4>.card{align-self:start !important;height:auto !important;}
+
+/* Construction progress card - content at top, no ugly gap */
+.grid-2>.card:first-child {
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+.grid-2>.card:first-child::after {
+    content: "";
+    flex: 1;
+    background: linear-gradient(to bottom, transparent, rgba(248,249,252,0.5));
+    border-radius: 0 0 8px 8px;
+    min-height: 0;
+}
+
+
+
+/* Dashboard specific layout: left card takes natural height, right takes full height */
+.grid-dash {
+    display:grid;
+    grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
+    gap:12px;
+    margin-bottom:18px;
+    align-items:start;
+}
+.grid-dash>.card {
+    align-self:start !important;
+    height:auto !important;
+    min-height:unset !important;
+}
+.card-span-left {
+    /* Natural height, no stretching */
+}
 </style>
 </head>
 <body>
@@ -1527,6 +1561,6 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 </div>
 
 
- <script src="/app.js?v=1777358887"></script>
+ <script src="/app.js?v=1777359499"></script>
 </body>
 </html>
