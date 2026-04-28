@@ -1275,21 +1275,22 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 
 
 
-/* Dashboard specific layout: left card takes natural height, right takes full height */
-.grid-dash {
-    display:grid;
-    grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
-    gap:12px;
-    margin-bottom:18px;
-    align-items:start;
+
+
+
+
+
+/* Dashboard construction + risk layout — stacked, no whitespace gap */
+.dash-stack, .grid-dash {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
 }
-.grid-dash>.card {
-    align-self:start !important;
-    height:auto !important;
-    min-height:unset !important;
-}
-.card-span-left {
-    /* Natural height, no stretching */
+.dash-stack > .card, .grid-dash > .card {
+    align-self: auto;
+    height: auto;
+    width: 100%;
 }
 </style>
 </head>
@@ -1561,6 +1562,6 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 </div>
 
 
- <script src="/app.js?v=1777359499"></script>
+ <script src="/app.js?v=1777360283"></script>
 </body>
 </html>
