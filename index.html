@@ -605,8 +605,8 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 .legend-dot{width:12px;height:12px;border-radius:2px;flex-shrink:0;border:1px solid rgba(0,0,0,0.08)}
 .tower-stats-row{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
 .tower-stat-chip{padding:3px 8px;border-radius:5px;font-size:10px;background:var(--surface2);border:1px solid var(--border);color:var(--txt2);white-space:nowrap}
-.flat-tooltip{position:fixed;background:var(--navy);color:#fff;padding:6px 10px;border-radius:8px;font-size:11px;z-index:999;pointer-events:none;display:none;line-height:1.5;box-shadow:var(--shadow-lg);min-width:140px}
-.flat-detail-panel{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;border-radius:12px;padding:12px 18px;z-index:300;display:none;align-items:center;gap:16px;box-shadow:var(--shadow-lg);font-size:12px;min-width:360px;animation:toast-in 0.25s cubic-bezier(0.16,1,0.3,1)}
+.flat-tooltip{position:fixed;background:#1e293b;color:#fff;padding:8px 12px;border-radius:8px;font-size:12px;z-index:9999;pointer-events:none;display:none;line-height:1.6;box-shadow:0 4px 20px rgba(0,0,0,0.35);min-width:150px;border:1px solid rgba(255,255,255,0.1)}
+.flat-detail-panel{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1e293b;color:#fff;border-radius:12px;padding:12px 18px;z-index:300;display:none;align-items:center;gap:16px;box-shadow:var(--shadow-lg);font-size:12px;min-width:360px;animation:toast-in 0.25s cubic-bezier(0.16,1,0.3,1)}
 .flat-detail-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:700}
 .flat-detail-meta{color:rgba(255,255,255,0.6);font-size:11px;margin-top:2px}
 .flat-panel-btn{padding:5px 10px;border-radius:6px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:11px;cursor:pointer;white-space:nowrap;font-family:'DM Sans',sans-serif;transition:background 0.15s}
@@ -1309,7 +1309,7 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 
 .tower-map-container { position: relative; }
 .flat-cell { position: relative; z-index: 1; }
-.flat-cell:hover { z-index: 100 !important; transform: scale(1.25) !important; }
+.flat-cell:hover { z-index: 100 !important; transform: scale(1.35) !important; box-shadow: 0 0 0 2px #4f46e5, 0 4px 16px rgba(0,0,0,0.25) !important; }
 </style>
 </head>
 <body>
@@ -1580,6 +1580,6 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 </div>
 
 
- <script src="/app.js?v=1777368143"></script>
+ <script src="/app.js?v=1777368973"></script>
 </body>
 </html>
