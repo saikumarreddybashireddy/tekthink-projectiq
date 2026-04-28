@@ -1310,6 +1310,25 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 .tower-map-container { position: relative; }
 .flat-cell { position: relative; z-index: 1; }
 .flat-cell:hover { z-index: 100 !important; transform: scale(1.35) !important; box-shadow: 0 0 0 2px #4f46e5, 0 4px 16px rgba(0,0,0,0.25) !important; }
+
+/* ── Unit / CA Detail Page (PPMC style) ── */
+.unit-detail-page{padding:0;max-width:900px;margin:0 auto}
+.ud-header{display:flex;align-items:center;gap:14px;padding:18px 24px 14px;border-bottom:1px solid #e5e7eb;background:#fff;position:sticky;top:0;z-index:10}
+.ud-back-btn{display:flex;align-items:center;gap:4px;background:none;border:1px solid #e5e7eb;border-radius:8px;padding:6px 12px;font-size:13px;font-weight:500;color:#374151;cursor:pointer;transition:all .15s}
+.ud-back-btn:hover{background:#f9fafb;border-color:#d1d5db}
+.ud-title{font-size:18px;font-weight:700;color:#111827;letter-spacing:-.3px}
+.ud-status-card{margin:20px 24px 16px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+.ud-status-row{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:16px 20px}
+.ud-status-item{padding:4px 0}
+.ud-status-label{font-size:11px;font-weight:600;color:#9ca3af;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+.ud-status-value{font-size:14px;font-weight:600;color:#111827;display:flex;align-items:center}
+.ud-phases-section{margin:0 24px 32px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 20px}
+.ud-phase-row{border:1px solid #e5e7eb;border-radius:8px;padding:12px 14px;margin-bottom:8px;transition:border-color .15s}
+.ud-phase-row:last-child{margin-bottom:0}
+.ud-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 24px 16px}
+.ud-info-cell{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px 14px}
+.ud-info-label{font-size:11px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+.ud-info-value{font-size:14px;font-weight:600;color:#111827}
 </style>
 </head>
 <body>
@@ -1580,6 +1599,6 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 </div>
 
 
- <script src="/app.js?v=1777368973"></script>
+ <script src="/app.js?v=1777369601"></script>
 </body>
 </html>
