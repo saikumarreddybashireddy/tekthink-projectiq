@@ -129,13 +129,15 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 .pf-footer-arrow{width:26px;height:26px;border-radius:7px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:13px}
 
 /* ── PROJECT HEADER ── */
-.proj-header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 20px 14px;margin-bottom:0}
+.proj-header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 20px 12px}
+.proj-breadcrumb{font-size:11px;color:var(--txt3);margin-bottom:8px;display:flex;align-items:center;gap:4px}
 .proj-breadcrumb-link{color:var(--accent);cursor:pointer;font-weight:500}
-.proj-title-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;white-space:nowrap;}
+.proj-title-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .proj-back{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border:1px solid var(--border2);border-radius:7px;cursor:pointer;color:var(--txt2);transition:all .15s;flex-shrink:0}
 .proj-back:hover{background:var(--surface2);color:var(--txt)}
-.proj-name{font-size:18px;font-weight:800;color:var(--txt);letter-spacing:-0.03em;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap;}
-.proj-meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;border:1px solid var(--border);border-radius:var(--r-sm);padding:10px 13px;display:flex;align-items:center;justify-content:space-between}
+.proj-name{font-size:18px;font-weight:800;color:var(--txt);letter-spacing:-0.03em;font-family:'Plus Jakarta Sans',sans-serif}
+.proj-meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.proj-meta-card{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);padding:10px 13px;display:flex;align-items:center;justify-content:space-between}
 .proj-meta-content{}
 .proj-meta-lbl{font-size:10px;color:var(--txt3);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px}
 .proj-meta-val{font-size:13.5px;font-weight:700;color:var(--txt)}
@@ -144,7 +146,7 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 /* ── CARDS ── */
 .card{background:var(--surface);border-radius:var(--r-lg);border:1px solid var(--border);box-shadow:var(--shadow-sm);overflow:hidden;align-self:start}
 .card-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 10px;border-bottom:1px solid var(--border)}
-.card-title{font-size:13px;font-weight:700;color:var(--txt);letter-spacing:-0.01em;margin-bottom:12px;}
+.card-title{font-size:13px;font-weight:700;color:var(--txt);letter-spacing:-0.01em}
 
 /* ── KPI CARDS ── */
 .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:14px}
@@ -189,7 +191,7 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 .tbl tr:last-child td{border-bottom:none}
 
 /* ── VIEW PAD ── */
-.view-pad{padding:16px 20px 20px;background:var(--bg)}
+.view-pad{padding:18px 20px;background:var(--bg)}
 .section-title{font-size:13px;font-weight:700;color:var(--txt);letter-spacing:-0.01em;margin:14px 0 8px}
 
 /* ── PROGRESS ── */
@@ -274,7 +276,7 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 .flat-stat-lbl{color:var(--txt3);font-size:10.5px;font-weight:500}
 
 /* ── RISK ROWS ── */
-.risk-row{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border-radius:8px;margin-bottom:6px;font-size:13px}
+.risk-row{display:flex;align-items:start;gap:10px;padding:10px 14px;border-radius:var(--r-sm);margin-bottom:7px}
 .risk-row.red{background:#fff5f5;border:1px solid #fecaca}
 .risk-row.amber{background:#fffbeb;border:1px solid #fde68a}
 .risk-row.green{background:#f0fdf4;border:1px solid #bbf7d0}
@@ -333,8 +335,10 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 /* card general */
 .card{background:var(--surface);border-radius:var(--r-lg);border:1px solid var(--border);box-shadow:var(--shadow-sm);overflow:hidden}
 .card-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 10px;border-bottom:1px solid var(--border)}
-.card-title{font-size:13px;font-weight:700;color:var(--txt);letter-spacing:-0.01em;margin-bottom:12px;}
-.view-pad{padding:16px 20px 20px;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--border);cursor:pointer}
+.card-title{font-size:13px;font-weight:700;color:var(--txt);letter-spacing:-0.01em}
+.view-pad{padding:18px 20px}
+/* Sidebar user info */
+.sidebar-user{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--border);cursor:pointer}
 .sidebar-user:hover{background:var(--surface2)}
 
 .notif-panel{display:none;position:absolute;right:10px;top:52px;width:320px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);z-index:100;max-height:70vh;overflow-y:auto}
@@ -376,7 +380,7 @@ h1,h2,h3,.logo-brand,.card-title,.section-title{font-family:'Plus Jakarta Sans',
 .quick-actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
 .quick-action{display:flex;align-items:center;gap:6px;padding:8px 16px;background:#fff;border:1px solid #e5e7eb;border-radius:20px;font-size:13px;font-weight:500;color:#374151;cursor:pointer;transition:all .15s;white-space:nowrap}
 .quick-action:hover{background:#f0f0ff;border-color:#c7d2fe;color:#4f46e5}
-.view-pad{padding:16px 20px 20px;background:#f8f9fc;min-height:400px}
+.view-pad{padding:20px 24px;background:#f8f9fc;min-height:400px}
 .btn-accent{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:#4f46e5;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
 .btn-accent:hover{background:#4338ca}
 
@@ -440,11 +444,11 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 .kpi-icon{font-size:20px;margin-bottom:8px}
 .kpi-sparkline{height:28px;display:flex;align-items:flex-end;gap:2px;margin-top:8px}
 .kpi-spark-bar{flex:1;border-radius:2px 2px 0 0;transition:height 0.5s}
-.grid-2{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:12px;margin-bottom:18px;align-items:start;grid-auto-rows:min-content}
-.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px;align-items:start;grid-auto-rows:min-content}
-.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px;align-items:start}
+.grid-2{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:12px;margin-bottom:18px;align-items:start}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px;align-items:start}
+.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}
 .card-title-actions{display:flex;align-items:center;gap:6px}
-.prog-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.prog-row{display:flex;align-items:center;gap:10px;margin-bottom:9px;cursor:pointer;padding:2px 0}
 .prog-label{font-size:12px;color:var(--txt);width:130px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:color 0.15s}
 .prog-bar-bg{flex:1;height:7px;background:var(--surface3);border-radius:10px;overflow:hidden}
 .prog-bar-fill{height:100%;border-radius:10px;transition:width 0.8s cubic-bezier(0.16,1,0.3,1)}
@@ -543,9 +547,9 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 .issue-card{padding:10px 12px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;cursor:pointer;transition:all 0.15s}
 .tab-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 24px;display:flex;gap:0;flex-shrink:0;min-height:36px}
 .tab{padding:9px 16px;font-size:12px;cursor:pointer;color:var(--txt2);border-bottom:2px solid transparent;margin-bottom:-1px;transition:all 0.15s;white-space:nowrap}
-.mb-12{margin-bottom:8px}
-.mb-14{margin-bottom:10px}
-.mb-18{margin-bottom:14px}
+.mb-12{margin-bottom:12px}
+.mb-14{margin-bottom:14px}
+.mb-18{margin-bottom:18px}
 .form-group{margin-bottom:14px}
 .form-label{font-size:11px;font-weight:600;color:var(--txt2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:5px;display:block}
 .form-input{width:100%;padding:8px 12px;border:1px solid var(--border);border-radius:8px;font-size:12.5px;font-family:'DM Sans',sans-serif;outline:none;color:var(--txt);transition:border-color 0.15s}
@@ -1256,38 +1260,44 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 .unit-chip.c-wip { background: #ea580c; }
 .unit-chip.c-todo { background: #9ca3af; }
 
-.grid-2>.card,.grid-3>.card,.grid-4>.card{align-self:start !important;height:auto !important;}
+/* Grid-dash: stack cards vertically at natural height */
+.grid-dash{display:flex;flex-direction:column;gap:12px;margin-bottom:14px}
+.grid-dash>.card{align-self:auto;height:auto}
 
-/* Construction progress card - content at top, no ugly gap */
-.grid-2>.card:first-child {
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-}
-
-.grid-2>.card:first-child::after {
-    content: "";
-    flex: 1;
-    background: linear-gradient(to bottom, transparent, rgba(248,249,252,0.5));
-    border-radius: 0 0 8px 8px;
-    min-height: 0;
-}
-
-
-
-
-
-
-
-
-/* Dashboard construction + risk layout — stacked, no whitespace gap */
+.pfc-page{background:#f1f3f8;min-height:100vh;padding-bottom:40px}
+.pfc-header{display:flex;align-items:center;justify-content:space-between;padding:28px 32px 20px}
+.pfc-header-title{font-size:28px;font-weight:800;color:#111827;letter-spacing:-.6px}
+.pfc-header-sub{font-size:13px;color:#9ca3af;margin-top:4px}
+.pfc-add-btn{display:flex;align-items:center;gap:8px;padding:11px 22px;background:#4f46e5;color:#fff;border:none;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 14px rgba(79,70,229,.35);transition:all .15s;white-space:nowrap}
+.pfc-add-btn:hover{background:#4338ca;transform:translateY(-1px)}
+.pfc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;padding:0 32px 32px}
+.pfc-card{background:#fff;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 2px 8px rgba(0,0,0,.07),0 0 0 1px rgba(0,0,0,.04)}
+.pfc-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.13),0 0 0 1px rgba(0,0,0,.04)}
+.pfc-banner{padding:22px 22px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:14px;position:relative;overflow:hidden;min-height:130px}
+.pfc-banner::after{content:"";position:absolute;bottom:-40px;right:-40px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.1);pointer-events:none}
+.pfc-banner::before{content:"";position:absolute;top:-20px;left:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.07);pointer-events:none}
+.pfc-banner-content{flex:1;min-width:0}
+.pfc-tag{display:inline-block;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;background:rgba(255,255,255,.2);color:#fff;border:1px solid rgba(255,255,255,.3)}
+.pfc-title{font-size:22px;font-weight:800;color:#fff;line-height:1.15;margin-bottom:5px;letter-spacing:-.3px}
+.pfc-sub{font-size:12px;color:rgba(255,255,255,.78);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pfc-banner-score{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:3px;color:rgba(255,255,255,.85);font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-top:2px}
+.pfc-body{padding:16px 20px 20px;border-top:none}
+.pfc-type-label{font-size:11px;font-weight:600;color:#9ca3af;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #f3f4f6}
+.pfc-stats-row{display:flex;align-items:stretch;background:#f8f9fc;border-radius:10px;overflow:hidden;margin-bottom:16px;border:1px solid #eef0f5}
+.pfc-stat-box{flex:1;display:flex;flex-direction:column;align-items:center;padding:13px 6px;gap:3px}
+.pfc-stat-num{font-size:18px;font-weight:800;color:#111827;letter-spacing:-.4px;line-height:1;white-space:nowrap}
+.pfc-stat-lbl{font-size:10px;color:#9ca3af;font-weight:500;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;margin-top:2px}
+.pfc-stat-divider{width:1px;background:#e5e7eb;margin:10px 0;flex-shrink:0}
+.pfc-progress-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.pfc-progress-track{height:8px;background:#f0f0f5;border-radius:5px;overflow:hidden;margin-bottom:10px}
+.pfc-progress-fill{height:100%;border-radius:5px}
+.pfc-footer{display:flex;justify-content:space-between;align-items:center;padding-top:12px;margin-top:4px;border-top:1px solid #f3f4f6;font-size:11px;color:#b0b7c3;font-weight:500}
 .dash-stack,.grid-dash{display:flex;flex-direction:column;gap:12px;margin-bottom:14px}
 .dash-stack > .card, .grid-dash > .card {
     align-self: auto;
     height: auto;
     width: 100%;
-}
-</style>
+}</style>
 </head>
 <body>
 <div class="app" id="app">
@@ -1557,6 +1567,6 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 </div>
 
 
- <script src="/app.js?v=1777361867"></script>
+ <script src="/app.js?v=1777362378"></script>
 </body>
 </html>
