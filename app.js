@@ -270,6 +270,60 @@ function renderUnitsView(){
     +'</div>';
 }
 
+
+function updatePhaseFromFlat(phaseName, el) {
+  if (!PHASE_OVERRIDES) window.PHASE_OVERRIDES = {};
+  var cur = PHASE_OVERRIDES[phaseName] ? PHASE_OVERRIDES[phaseName].status : 'todo';
+  var next = cur === 'todo' ? 'wip' : cur === 'wip' ? 'done' : 'todo';
+  var pct = next === 'done' ? 100 : next === 'wip' ? 50 : 0;
+  PHASE_OVERRIDES[phaseName] = { status: next, pct: pct };
+
+  // Update the row visually immediately
+  var color = pct >= 100 ? '#16a34a' : pct > 0 ? '#f59e0b' : '#e5e7eb';
+  var border = pct >= 100 ? '#bbf7d0' : pct > 0 ? '#fde68a' : '#e5e7eb';
+  el.style.borderColor = border;
+  var pctEl = el.querySelector('div > div:last-child');
+  if (pctEl) { pctEl.textContent = pct + '%'; pctEl.style.color = color; }
+  var bar = el.querySelector('div:last-child div');
+  if (bar) { bar.style.width = pct + '%'; bar.style.background = color; }
+
+  // Status badge next to phase name
+  var nameEl = el.querySelector('div > div:first-child');
+  if (nameEl) {
+    var badge = el.querySelector('.phase-status-badge');
+    if (!badge) {
+      badge = document.createElement('span');
+      badge.className = 'phase-status-badge';
+      badge.style.cssText = 'display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle';
+      nameEl.appendChild(badge);
+    }
+    var labels = { todo: 'Not Started', wip: 'In Progress', done: 'Completed' };
+    var bgColors = { todo: '#f3f4f6', wip: '#fef3c7', done: '#dcfce7' };
+    var txtColors = { todo: '#6b7280', wip: '#92400e', done: '#166534' };
+    badge.textContent = labels[next];
+    badge.style.background = bgColors[next];
+    badge.style.color = txtColors[next];
+  }
+
+  // Recalculate overall progress bar
+  var allRows = document.querySelectorAll('.ud-phase-row');
+  var total = allRows.length;
+  var done = 0;
+  allRows.forEach(function(r) {
+    var pBar = r.querySelector('div:last-child div');
+    if (pBar && parseInt(pBar.style.width) >= 100) done++;
+  });
+  var overallPct = total ? Math.round(done / total * 100) : 0;
+  var overallBar = document.querySelector('.ud-overall-fill');
+  var overallLabel = document.querySelector('.ud-section-badge');
+  if (overallBar) { overallBar.style.width = overallPct + '%'; }
+  if (overallLabel) { overallLabel.textContent = done + '/17 Completed (' + overallPct + '%)'; }
+
+  // Show toast
+  var msgs = { todo: 'Reset to Not Started', wip: 'Marked In Progress', done: 'Marked Complete ✓' };
+  showToast(phaseName + ': ' + msgs[next], next === 'done' ? 'success' : 'info');
+}
+
 function openUnitDetail(tower, floor, unitIdx){
   var flat = FLAT_DATA[tower][floor][unitIdx];
   if(!flat) return;
@@ -287,7 +341,7 @@ function openUnitDetail(tower, floor, unitIdx){
   var phaseRows = phases.map(function(p){
     var pColor = p.pct>=100?'#16a34a':p.pct>0?'#f59e0b':'#e5e7eb';
     var border = p.pct>=100?'#bbf7d0':p.pct>0?'#fde68a':'#e5e7eb';
-    return '<div class="ud-phase-row" style="border-color:'+border+'">'
+    return '<div class="ud-phase-row" style="border-color:'+border+';cursor:pointer" onclick="updatePhaseFromFlat(\''+p.name+'\',this)" title="Click to update phase status">'
       +'<div style="display:flex;align-items:center;justify-content:space-between">'
         +'<div style="font-size:13px;font-weight:600;color:#111827;letter-spacing:.01em">'+p.name+'</div>'
         +'<div style="font-size:12px;font-weight:700;color:'+pColor+'">'+p.pct+'%</div>'

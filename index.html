@@ -1475,6 +1475,13 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 .ud-phases-section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 18px 20px; }
 .ud-info-section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 18px 20px; }
 .ud-actions-section { padding-bottom: 24px; }
+
+/* Phase row clickable states */
+.ud-phase-row { cursor: pointer !important; transition: all .15s !important; }
+.ud-phase-row:hover { background: #f8f9ff !important; box-shadow: 0 0 0 2px #c7d2fe !important; }
+.ud-phase-row:hover::after { content: "Click to update"; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 10px; color: #6366f1; font-weight: 600; opacity: 0.7; }
+.ud-phase-row { position: relative; }
+.phase-status-badge { transition: all .2s; }
 </style>
 </head>
 <body>
@@ -1745,6 +1752,6 @@ h1,h2,h3,.heading{font-family:'Syne',sans-serif}
 </div>
 
 
- <script src="/app.js?v=1777537518"></script>
+ <script src="/app.js?v=1777538030"></script>
 </body>
 </html>
