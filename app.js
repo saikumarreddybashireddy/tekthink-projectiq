@@ -282,7 +282,7 @@ function updatePhaseFromFlat(phaseName, el) {
   var color = pct >= 100 ? '#16a34a' : pct > 0 ? '#f59e0b' : '#e5e7eb';
   var border = pct >= 100 ? '#bbf7d0' : pct > 0 ? '#fde68a' : '#e5e7eb';
   el.style.borderColor = border;
-  var pctEl = el.querySelector('div > div:last-child');
+  var pctEl = el.querySelector('div:first-child > div:last-child');
   if (pctEl) { pctEl.textContent = pct + '%'; pctEl.style.color = color; }
   var bar = el.querySelector('div:last-child div');
   if (bar) { bar.style.width = pct + '%'; bar.style.background = color; }
@@ -305,13 +305,13 @@ function updatePhaseFromFlat(phaseName, el) {
     badge.style.color = txtColors[next];
   }
 
-  // Recalculate overall progress bar
-  var allRows = document.querySelectorAll('.ud-phase-row');
-  var total = allRows.length;
+  // Recalculate overall progress bar using PHASE_OVERRIDES
+  var wbsPhases = window.WBS_PHASES || [];
+  var total = wbsPhases.length || 17;
   var done = 0;
-  allRows.forEach(function(r) {
-    var pBar = r.querySelector('div:last-child div');
-    if (pBar && parseInt(pBar.style.width) >= 100) done++;
+  wbsPhases.forEach(function(ph) {
+    var ov = PHASE_OVERRIDES && PHASE_OVERRIDES[ph];
+    if (ov && (ov.status === 'done' || ov.pct >= 100)) done++;
   });
   var overallPct = total ? Math.round(done / total * 100) : 0;
   var overallBar = document.querySelector('.ud-overall-fill');
